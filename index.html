@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Navbar</title>
+  </head>
+  <body>
+    <header><div class="navbar">
+        <div class="logo"><a href="#">web</a></div>
+        <ul class="links">
+            <li><a href="hore">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="service">service</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
+        <a href="#" class="action_btn">Get started</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+  <div class="dropdown_menu">
+            <li><a href="hore">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="service">contact</a></li>
+            <li><a href="contact">service</a></li>
+            <li><a href="#" class="action_btn">Get started</a></li>
+  </div>
+  </header>
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+    toggleBtn.onclick = function(){
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+      toggleBtnIcon.classList = isOpen
+      ?'fa-solid fa-xmark'
+      :'fa-solid fa-bars'
+    }
+  </script>
+  <div class="box">
+    <input type="text" placeholder="search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+  </body>
+</html>
